@@ -22,6 +22,10 @@ describe('App', () => {
     
   });
 
+  it ('shows a comment list', () => {
+    expect(component.find('.comment-list')).to.exist;
+  })
+
   // Use 'expect' to make an 'assertion' about a target
   
 })
