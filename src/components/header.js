@@ -6,8 +6,9 @@ import * as actions from '../actions';
 class Header extends Component {
 
   authButton() {
+      debugger;
     if (this.props.authenticated) {
-      return <button onClick={() => this.props.authenticate(false)}>Sign In</button>
+      return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>
     }
 
     return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
@@ -24,7 +25,7 @@ class Header extends Component {
             <Link to="/resources">Resources</Link>
           </li>
           <li className="nav-item">
-            {this.authButton()}
+            {this.authButton.call(this)}
           </li>
         </ul>
       </nav>
